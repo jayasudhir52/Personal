@@ -6,6 +6,38 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+    /* ===== Preloader Styles ===== */
+#preloader {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at top, #0f2027, #000);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader {
+    font-size: 32px;
+    letter-spacing: 6px;
+    animation: pulse 1.5s infinite alternate;
+}
+
+/* Glow animation */
+@keyframes pulse {
+    from {
+        opacity: 0.6;
+        text-shadow:
+            0 0 10px #00f7ff,
+            0 0 20px #00f7ff;
+    }
+    to {
+        opacity: 1;
+        text-shadow:
+            0 0 20px #00f7ff,
+            0 0 40px #00f7ff;
+    }
+}
 * {
     margin: 0;
     padding: 0;
@@ -211,6 +243,7 @@ footer {
 
 </body>
 </html>
+
 
 
 
