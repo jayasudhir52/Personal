@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NeonTech Computer Service</title>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "BE9i-uILUobMjC7o6",
+      });
+   })();
+</script>
+<script>
+function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs.send("service_3jcgl4w", "template_q32361k", {
+        from_name: document.getElementById("name").value,
+        from_email: document.getElementById("email").value,
+        message: document.getElementById("message").value
+    }).then(() => {
+        alert("Message sent successfully!");
+        document.querySelector(".contact-form").reset();
+    }, () => {
+        alert("Failed to send message.");
+    });
+}
+</script>
+<form class="contact-form" onsubmit="sendEmail(event)">
+<style>
+<style>
+/* NEON THEME COLORS */
+:root {
+    --neon-blue: #00f6ff;
+    --neon-pink: #ff00ff;
+    --dark-bg: #050014;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at top, #12002b, var(--dark-bg));
+    color: white;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: var(--neon-blue);
+    text-shadow: 0 0 10px var(--neon-blue),
+                 0 0 20px var(--neon-blue);
+}
+
+header p {
+    margin-top: 15px;
+    color: #ccc;
+    font-size: 1.2rem;
+}
+
+/* NAVIGATION */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px;
+    background: rgba(0,0,0,0.6);
+    border-top: 1px solid var(--neon-blue);
+    border-bottom: 1px solid var(--neon-blue);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--neon-pink);
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* SECTIONS */
+section {
+    padding: 70px 10%;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--neon-pink);
+    text-shadow: 0 0 10px var(--neon-pink);
+}
+
+/* SERVICES */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.service-box {
+    padding: 30px;
+    text-align: center;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.05);
+    border: 2px solid var(--neon-blue);
+    box-shadow: 0 0 15px var(--neon-blue);
+    transition: 0.3s;
+}
+
+.service-box:hover {
+    box-shadow: 0 0 30px var(--neon-pink);
+    transform: translateY(-10px);
+}
+
+.service-box h3 {
+    margin-bottom: 15px;
+    color: var(--neon-blue);
+}
+
+/* ABOUT */
+.about {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    background: rgba(255,255,255,0.05);
+    padding: 40px;
+    border-radius: 20px;
+    border: 2px solid var(--neon-pink);
+    box-shadow: 0 0 25px var(--neon-pink);
+}
+
+/* CONTACT */
+.contact {
+    max-width: 500px;
+    margin: auto;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    background: transparent;
+    border: 2px solid var(--neon-blue);
+    border-radius: 10px;
+    color: white;
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+    color: #aaa;
+}
+
+/* BUTTON */
+.contact button {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 2px solid var(--neon-pink);
+    color: var(--neon-pink);
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 0 15px var(--neon-pink);
+    transition: 0.3s;
+}
+
+.contact button:hover {
+    background: var(--neon-pink);
+    color: black;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid var(--neon-blue);
+    margin-top: 40px;
+    color: #ccc;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>NeonTech Computer Service</h1>
+    <p>Futuristic Repair • Upgrade • Protection</p>
+</header>
+
+<nav>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="service-box">
+            <h3>PC Repair</h3>
+            <p>Fast and reliable hardware & software repairs.</p>
+        </div>
+        <div class="service-box">
+            <h3>Virus Removal</h3>
+            <p>Advanced malware & security solutions.</p>
+        </div>
+        <div class="service-box">
+            <h3>Data Recovery</h3>
+            <p>Recover lost files safely and efficiently.</p>
+        </div>
+        <div class="service-box">
+            <h3>Network Setup</h3>
+            <p>Secure and optimized network solutions.</p>
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <h2>About Us</h2>
+    <div class="about">
+        <p>
+            NeonTech is a futuristic computer service center delivering
+            high-quality repairs and IT solutions using cutting-edge technology.
+        </p>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <form class="contact">
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea rows="4" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2025 NeonTech Computer Service</p>
+	<p>📧 E-Mail       : efxsudhir@gmail.com</p>
+	<p>📞 Contact      : +91 87780 46822</p>
+	<p>🏢 Opening Time : 09:00AM to 08:00PM</p>
+	<p>🗺️ Location     : Belur</p>
+</footer>
+
+</body>
+</html>
