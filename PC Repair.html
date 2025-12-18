@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Juno PC Repair Solutions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    :root {
+      --neon-blue: #00f7ff;
+      --neon-purple: #b026ff;
+      --bg-dark: #020617;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: radial-gradient(circle at top, #020617, #000);
+      color: #e5e7eb;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    header h1 {
+      font-size: 48px;
+      color: var(--neon-blue);
+      text-shadow:
+        0 0 10px var(--neon-blue),
+        0 0 20px var(--neon-blue),
+        0 0 40px var(--neon-purple);
+    }
+
+    header p {
+      font-size: 18px;
+      color: #94a3b8;
+      margin-top: 10px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .solutions {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: rgba(2, 6, 23, 0.8);
+      border-radius: 16px;
+      padding: 25px;
+      border: 2px solid transparent;
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));
+      filter: blur(12px);
+      opacity: 0;
+      z-index: -1;
+      transition: opacity 0.3s;
+    }
+
+    .card:hover::before {
+      opacity: 1;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .card h3 {
+      color: var(--neon-blue);
+      margin-bottom: 10px;
+      text-shadow: 0 0 6px var(--neon-blue);
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #cbd5f5;
+      line-height: 1.6;
+    }
+
+    .solution-details {
+      display: none;
+      margin-top: 15px;
+      color: #e0e7ff;
+      font-size: 14px;
+    }
+
+    .card.active .solution-details {
+      display: block;
+      animation: fadeIn 0.4s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(5px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 60px;
+      font-size: 14px;
+      color: #64748b;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>PC Repair Solutions</h1>
+    <p>Click on a problem to reveal the solution</p>
+  </header>
+
+  <div class="container">
+    <section class="solutions">
+
+      <div class="card" onclick="toggleSolution(this)">
+        <h3>⚡ PC Won’t Turn On</h3>
+        <p>Power-related startup issues.</p>
+        <div class="solution-details">
+          ✔ Check power cable and PSU<br>
+          ✔ Test RAM and motherboard<br>
+          ✔ Reset CMOS battery
+        </div>
+      </div>
+
+      <div class="card" onclick="toggleSolution(this)">
+        <h3>🐢 Slow Performance</h3>
+        <p>System running slow or freezing.</p>
+        <div class="solution-details">
+          ✔ Remove unnecessary startup apps<br>
+          ✔ Upgrade to SSD<br>
+          ✔ Scan for malware
+        </div>
+      </div>
+
+      <div class="card" onclick="toggleSolution(this)">
+        <h3>🦠 Virus & Malware</h3>
+        <p>Unwanted popups or suspicious behavior.</p>
+        <div class="solution-details">
+          ✔ Boot into Safe Mode<br>
+          ✔ Run antivirus & malware scan<br>
+          ✔ Reinstall OS if needed
+        </div>
+      </div>
+
+      <div class="card" onclick="toggleSolution(this)">
+        <h3>🌐 No Internet</h3>
+        <p>Wi-Fi or Ethernet connection problems.</p>
+        <div class="solution-details">
+          ✔ Restart router & PC<br>
+          ✔ Update network drivers<br>
+          ✔ Reset network settings
+        </div>
+      </div>
+
+      <div class="card" onclick="toggleSolution(this)">
+        <h3>🔥 Overheating</h3>
+        <p>PC shutting down due to heat.</p>
+        <div class="solution-details">
+          ✔ Clean internal dust<br>
+          ✔ Replace thermal paste<br>
+          ✔ Improve airflow
+        </div>
+      </div>
+
+      <div class="card" onclick="toggleSolution(this)">
+        <h3>🖥 No Display</h3>
+        <p>PC powers on but no screen output.</p>
+        <div class="solution-details">
+          ✔ Check monitor & cable<br>
+          ✔ Reseat GPU & RAM<br>
+          ✔ Test with onboard graphics
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+  <footer>
+    © 2025 Juno PC Repair | Future-Ready Tech Support
+  </footer>
+
+  <script>
+    function toggleSolution(card) {
+      card.classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>
