@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Remove Unnecessary Startup Apps</title>
+
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Tahoma, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(circle at top, #0f0024, #000);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #e6ffff;
+        }
+
+        .neon-container {
+            max-width: 850px;
+            padding: 40px 45px;
+            border-radius: 18px;
+            background: rgba(0, 0, 0, 0.65);
+            border: 2px solid #00f6ff;
+            box-shadow:
+                0 0 15px #00f6ff,
+                0 0 35px #00f6ff,
+                inset 0 0 15px #00f6ff;
+            animation: neonPulse 3s infinite alternate;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.6rem;
+            margin-bottom: 30px;
+            color: #00f6ff;
+            text-shadow:
+                0 0 8px #00f6ff,
+                0 0 20px #00f6ff,
+                0 0 40px #00f6ff;
+        }
+
+        h2 {
+            margin-top: 25px;
+            margin-bottom: 12px;
+            font-size: 1.6rem;
+            color: #ff00cc;
+            text-shadow: 0 0 12px #ff00cc;
+        }
+
+        ul {
+            margin-left: 22px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            line-height: 1.7;
+            text-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
+        }
+
+        p {
+            margin-top: 15px;
+            font-size: 1.1rem;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+        }
+
+        strong {
+            color: #00ffcc;
+            text-shadow: 0 0 10px #00ffcc;
+        }
+
+        @keyframes neonPulse {
+            from {
+                box-shadow:
+                    0 0 12px #00f6ff,
+                    0 0 25px #00f6ff,
+                    inset 0 0 12px #00f6ff;
+            }
+            to {
+                box-shadow:
+                    0 0 30px #00f6ff,
+                    0 0 60px #00f6ff,
+                    inset 0 0 30px #00f6ff;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="neon-container">
+        <h1>Remove Unnecessary Startup Apps</h1>
+
+        <h2>Why Remove Startup Apps?</h2>
+        <ul>
+            <li>Reduces system boot time.</li>
+            <li>Improves overall system performance.</li>
+            <li>Frees up memory and CPU resources.</li>
+            <li>Prevents background apps from slowing down the system.</li>
+        </ul>
+
+        <h2>Steps to Disable Startup Apps (Windows)</h2>
+        <ul>
+            <li>Press <strong>Ctrl + Shift + Esc</strong> to open Task Manager.</li>
+            <li>Click the <strong>Startup</strong> tab.</li>
+            <li>Review the list of programs that start with Windows.</li>
+            <li>Select unnecessary applications.</li>
+            <li>Click <strong>Disable</strong> to prevent them from launching at startup.</li>
+        </ul>
+
+        <h2>After Disabling Startup Apps</h2>
+        <p>
+            Restart the system and observe improved boot time and responsiveness.
+            Only keep essential programs enabled, such as antivirus software
+            or hardware-related utilities.
+        </p>
+    </div>
+
+</body>
+</html>

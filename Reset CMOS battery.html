@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reset CMOS Battery</title>
+
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Tahoma, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(circle at top, #140024, #000);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #e6ffff;
+        }
+
+        .neon-container {
+            max-width: 800px;
+            padding: 40px 45px;
+            border-radius: 18px;
+            background: rgba(0, 0, 0, 0.65);
+            border: 2px solid #00ffea;
+            box-shadow:
+                0 0 15px #00ffea,
+                0 0 35px #00ffea,
+                inset 0 0 15px #00ffea;
+            animation: neonPulse 3s infinite alternate;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.6rem;
+            margin-bottom: 30px;
+            color: #00ffea;
+            text-shadow:
+                0 0 8px #00ffea,
+                0 0 20px #00ffea,
+                0 0 40px #00ffea;
+        }
+
+        h2 {
+            margin-top: 25px;
+            margin-bottom: 12px;
+            font-size: 1.6rem;
+            color: #ff00cc;
+            text-shadow: 0 0 12px #ff00cc;
+        }
+
+        ul {
+            margin-left: 22px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            line-height: 1.7;
+            text-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
+        }
+
+        p {
+            margin-top: 15px;
+            font-size: 1.1rem;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+        }
+
+        strong {
+            color: #00ffcc;
+            text-shadow: 0 0 10px #00ffcc;
+        }
+
+        @keyframes neonPulse {
+            from {
+                box-shadow:
+                    0 0 12px #00ffea,
+                    0 0 25px #00ffea,
+                    inset 0 0 12px #00ffea;
+            }
+            to {
+                box-shadow:
+                    0 0 30px #00ffea,
+                    0 0 60px #00ffea,
+                    inset 0 0 30px #00ffea;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="neon-container">
+        <h1>Reset CMOS Battery</h1>
+
+        <h2>When to Reset CMOS</h2>
+        <ul>
+            <li>System fails to boot after BIOS changes.</li>
+            <li>Incorrect system time or BIOS settings.</li>
+            <li>Hardware changes are not detected.</li>
+            <li>Continuous boot loops or POST errors.</li>
+        </ul>
+
+        <h2>Steps to Reset CMOS Battery</h2>
+        <ul>
+            <li>Power off the computer and unplug it from the power source.</li>
+            <li>Press and hold the power button for 10 seconds to discharge residual power.</li>
+            <li>Open the computer case carefully.</li>
+            <li>Locate the round CMOS battery on the motherboard.</li>
+            <li>Remove the battery and wait for 5–10 minutes.</li>
+            <li>Reinsert the battery in the correct orientation.</li>
+            <li>Close the case and reconnect the power.</li>
+        </ul>
+
+        <h2>After Reset</h2>
+        <p>
+            Power on the system and enter the BIOS setup to reconfigure
+            date, time, and any custom settings. If issues persist,
+            the motherboard may require further diagnosis or replacement.
+        </p>
+    </div>
+
+</body>
+</html>

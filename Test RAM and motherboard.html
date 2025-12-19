@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test RAM and Motherboard</title>
+
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Tahoma, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(circle at top, #12002f, #000);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #e6ffff;
+        }
+
+        .neon-container {
+            max-width: 850px;
+            padding: 40px 45px;
+            border-radius: 18px;
+            background: rgba(0, 0, 0, 0.65);
+            border: 2px solid #00ffee;
+            box-shadow:
+                0 0 15px #00ffee,
+                0 0 35px #00ffee,
+                inset 0 0 15px #00ffee;
+            animation: neonPulse 3s infinite alternate;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.6rem;
+            margin-bottom: 30px;
+            color: #00ffee;
+            text-shadow:
+                0 0 8px #00ffee,
+                0 0 20px #00ffee,
+                0 0 40px #00ffee;
+        }
+
+        h2 {
+            margin-top: 25px;
+            margin-bottom: 12px;
+            font-size: 1.6rem;
+            color: #ff00cc;
+            text-shadow: 0 0 12px #ff00cc;
+        }
+
+        ul {
+            margin-left: 22px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            line-height: 1.7;
+            text-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
+        }
+
+        p {
+            margin-top: 15px;
+            font-size: 1.1rem;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+        }
+
+        strong {
+            color: #00ffcc;
+            text-shadow: 0 0 10px #00ffcc;
+        }
+
+        @keyframes neonPulse {
+            from {
+                box-shadow:
+                    0 0 12px #00ffee,
+                    0 0 25px #00ffee,
+                    inset 0 0 12px #00ffee;
+            }
+            to {
+                box-shadow:
+                    0 0 30px #00ffee,
+                    0 0 60px #00ffee,
+                    inset 0 0 30px #00ffee;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="neon-container">
+        <h1>Test RAM and Motherboard</h1>
+
+        <h2>Test RAM</h2>
+        <ul>
+            <li>Power off the system and unplug it from the power source.</li>
+            <li>Remove all RAM sticks from the motherboard.</li>
+            <li>Insert a single RAM stick into the recommended slot.</li>
+            <li>Power on the system and check if it boots.</li>
+            <li>Test each RAM stick individually to identify faulty memory.</li>
+            <li>Clean RAM contacts gently and ensure they are seated firmly.</li>
+        </ul>
+
+        <h2>Test Motherboard</h2>
+        <ul>
+            <li>Check the motherboard for visible damage or burnt components.</li>
+            <li>Listen for beep codes or observe diagnostic LEDs during startup.</li>
+            <li>Reset the BIOS by clearing the CMOS.</li>
+            <li>Ensure the motherboard is not shorting against the case.</li>
+            <li>Test the system outside the case if necessary.</li>
+            <li>Use known-working RAM and PSU to confirm motherboard failure.</li>
+        </ul>
+
+        <h2>Final Recommendation</h2>
+        <p>
+            If the system fails to boot after testing RAM and verifying all connections,
+            the motherboard may be defective and should be replaced with a compatible model.
+        </p>
+    </div>
+
+</body>
+</html>

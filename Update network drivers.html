@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Network Drivers</title>
+
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Tahoma, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(circle at top, #0c001f, #000);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #e6ffff;
+        }
+
+        .neon-container {
+            max-width: 850px;
+            padding: 40px 45px;
+            border-radius: 18px;
+            background: rgba(0, 0, 0, 0.65);
+            border: 2px solid #00fff5;
+            box-shadow:
+                0 0 15px #00fff5,
+                0 0 35px #00fff5,
+                inset 0 0 15px #00fff5;
+            animation: neonPulse 3s infinite alternate;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.6rem;
+            margin-bottom: 30px;
+            color: #00fff5;
+            text-shadow:
+                0 0 8px #00fff5,
+                0 0 20px #00fff5,
+                0 0 40px #00fff5;
+        }
+
+        h2 {
+            margin-top: 25px;
+            margin-bottom: 12px;
+            font-size: 1.6rem;
+            color: #ff00cc;
+            text-shadow: 0 0 12px #ff00cc;
+        }
+
+        ul {
+            margin-left: 22px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            line-height: 1.7;
+            text-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
+        }
+
+        p {
+            margin-top: 15px;
+            font-size: 1.1rem;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+        }
+
+        strong {
+            color: #00ffcc;
+            text-shadow: 0 0 10px #00ffcc;
+        }
+
+        @keyframes neonPulse {
+            from {
+                box-shadow:
+                    0 0 12px #00fff5,
+                    0 0 25px #00fff5,
+                    inset 0 0 12px #00fff5;
+            }
+            to {
+                box-shadow:
+                    0 0 30px #00fff5,
+                    0 0 60px #00fff5,
+                    inset 0 0 30px #00fff5;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="neon-container">
+        <h1>Update Network Drivers</h1>
+
+        <h2>Why Update Network Drivers?</h2>
+        <ul>
+            <li>Ensures stable and fast internet connectivity.</li>
+            <li>Fixes bugs or conflicts with network hardware.</li>
+            <li>Improves compatibility with new routers or ISPs.</li>
+            <li>Enhances overall network performance and security.</li>
+        </ul>
+
+        <h2>Steps to Update Network Drivers (Windows)</h2>
+        <ul>
+            <li>Press <strong>Win + X</strong> and select <strong>Device Manager</strong>.</li>
+            <li>Expand the <strong>Network adapters</strong> section.</li>
+            <li>Right-click your network device and select <strong>Update driver</strong>.</li>
+            <li>Choose <strong>Search automatically for updated driver software</strong>.</li>
+            <li>Follow on-screen instructions and restart the PC if prompted.</li>
+        </ul>
+
+        <h2>Additional Tips</h2>
+        <p>
+            For best results, visit the manufacturer's website to download the latest
+            driver versions. Keeping network drivers updated helps prevent connection
+            drops and improves overall system stability.
+        </p>
+    </div>
+
+</body>
+</html>

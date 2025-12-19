@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Boot into Safe Mode</title>
+
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Tahoma, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(circle at top, #0e001f, #000);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #e6ffff;
+        }
+
+        .neon-container {
+            max-width: 850px;
+            padding: 40px 45px;
+            border-radius: 18px;
+            background: rgba(0, 0, 0, 0.65);
+            border: 2px solid #00faff;
+            box-shadow:
+                0 0 15px #00faff,
+                0 0 35px #00faff,
+                inset 0 0 15px #00faff;
+            animation: neonPulse 3s infinite alternate;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.6rem;
+            margin-bottom: 30px;
+            color: #00faff;
+            text-shadow:
+                0 0 8px #00faff,
+                0 0 20px #00faff,
+                0 0 40px #00faff;
+        }
+
+        h2 {
+            margin-top: 25px;
+            margin-bottom: 12px;
+            font-size: 1.6rem;
+            color: #ff00cc;
+            text-shadow: 0 0 12px #ff00cc;
+        }
+
+        ul {
+            margin-left: 22px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            line-height: 1.7;
+            text-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
+        }
+
+        p {
+            margin-top: 15px;
+            font-size: 1.1rem;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+        }
+
+        strong {
+            color: #00ffcc;
+            text-shadow: 0 0 10px #00ffcc;
+        }
+
+        @keyframes neonPulse {
+            from {
+                box-shadow:
+                    0 0 12px #00faff,
+                    0 0 25px #00faff,
+                    inset 0 0 12px #00faff;
+            }
+            to {
+                box-shadow:
+                    0 0 30px #00faff,
+                    0 0 60px #00faff,
+                    inset 0 0 30px #00faff;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="neon-container">
+        <h1>Boot into Safe Mode</h1>
+
+        <h2>Why Use Safe Mode?</h2>
+        <ul>
+            <li>Starts Windows with minimal drivers and services.</li>
+            <li>Helps diagnose software and driver issues.</li>
+            <li>Allows removal of problematic programs or malware.</li>
+            <li>Improves troubleshooting when normal boot fails.</li>
+        </ul>
+
+        <h2>Steps to Boot into Safe Mode (Windows)</h2>
+        <ul>
+            <li>Restart the computer.</li>
+            <li>Interrupt the boot process three times to access recovery mode.</li>
+            <li>Select <strong>Troubleshoot → Advanced options → Startup Settings</strong>.</li>
+            <li>Click <strong>Restart</strong>.</li>
+            <li>Press <strong>4</strong> or <strong>F4</strong> for Safe Mode.</li>
+            <li>Press <strong>5</strong> or <strong>F5</strong> for Safe Mode with Networking.</li>
+        </ul>
+
+        <h2>After Booting into Safe Mode</h2>
+        <p>
+            Once in Safe Mode, uninstall recently added software, update drivers,
+            or run antivirus scans. Restart the system normally to check if the
+            issue has been resolved.
+        </p>
+    </div>
+
+</body>
+</html>

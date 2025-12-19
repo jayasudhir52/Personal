@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check Power Cable and PSU</title>
+
+    <style>
+        /* Base reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Tahoma, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(circle at top, #0a1a2f, #000);
+            color: #e0ffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .neon-container {
+            max-width: 800px;
+            padding: 40px;
+            border-radius: 16px;
+            background: rgba(0, 0, 0, 0.6);
+            border: 2px solid #00ffff;
+            box-shadow:
+                0 0 15px #00ffff,
+                0 0 30px #00ffff,
+                inset 0 0 15px #00ffff;
+            animation: glow 3s infinite alternate;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #00ffff;
+            text-shadow:
+                0 0 5px #00ffff,
+                0 0 15px #00ffff,
+                0 0 30px #00ffff;
+        }
+
+        h2 {
+            margin-top: 25px;
+            margin-bottom: 10px;
+            color: #ff00ff;
+            text-shadow: 0 0 10px #ff00ff;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+            text-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
+        }
+
+        p {
+            margin-top: 15px;
+            font-size: 1.1rem;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+        }
+
+        strong {
+            color: #00ffcc;
+            text-shadow: 0 0 10px #00ffcc;
+        }
+
+        @keyframes glow {
+            from {
+                box-shadow:
+                    0 0 10px #00ffff,
+                    0 0 25px #00ffff,
+                    inset 0 0 10px #00ffff;
+            }
+            to {
+                box-shadow:
+                    0 0 25px #00ffff,
+                    0 0 50px #00ffff,
+                    inset 0 0 25px #00ffff;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="neon-container">
+        <h1>Check Power Cable and PSU</h1>
+
+        <h2>Check Power Cable</h2>
+        <ul>
+            <li>Ensure the power cable is firmly connected to both the PC and the wall socket.</li>
+            <li>Try a different wall outlet to rule out socket issues.</li>
+            <li>Inspect the cable for cuts, bends, or exposed wires.</li>
+            <li>Replace the cable if any physical damage is found.</li>
+            <li>Test using another known working power cable.</li>
+            <li>Plug the PC directly into the wall socket instead of a power strip.</li>
+        </ul>
+
+        <h2>Check PSU (Power Supply Unit)</h2>
+        <ul>
+            <li>Ensure the PSU power switch at the back is set to <strong>ON (I)</strong>.</li>
+            <li>Verify the 24-pin motherboard power connector is properly seated.</li>
+            <li>Check the CPU power connector (4-pin or 8-pin) is securely connected.</li>
+            <li>Listen for PSU fan movement or electrical sounds when powering on.</li>
+            <li>Check for any burnt smell or visible damage from the PSU.</li>
+            <li>Test the system using a PSU tester or a known working PSU.</li>
+        </ul>
+
+        <h2>Final Recommendation</h2>
+        <p>
+            If the system still does not power on after performing these checks,
+            replace the PSU with a compatible, known-good unit that meets the
+            system’s wattage requirements.
+        </p>
+    </div>
+
+</body>
+</html>

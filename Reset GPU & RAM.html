@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reset GPU & RAM</title>
+
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Tahoma, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(circle at top, #0f001f, #000);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #e6ffff;
+        }
+
+        .neon-container {
+            max-width: 850px;
+            padding: 40px 45px;
+            border-radius: 18px;
+            background: rgba(0, 0, 0, 0.65);
+            border: 2px solid #00fff5;
+            box-shadow:
+                0 0 15px #00fff5,
+                0 0 35px #00fff5,
+                inset 0 0 15px #00fff5;
+            animation: neonPulse 3s infinite alternate;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.6rem;
+            margin-bottom: 30px;
+            color: #00fff5;
+            text-shadow:
+                0 0 8px #00fff5,
+                0 0 20px #00fff5,
+                0 0 40px #00fff5;
+        }
+
+        h2 {
+            margin-top: 25px;
+            margin-bottom: 12px;
+            font-size: 1.6rem;
+            color: #ff00cc;
+            text-shadow: 0 0 12px #ff00cc;
+        }
+
+        ul {
+            margin-left: 22px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            line-height: 1.7;
+            text-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
+        }
+
+        p {
+            margin-top: 15px;
+            font-size: 1.1rem;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+        }
+
+        strong {
+            color: #00ffcc;
+            text-shadow: 0 0 10px #00ffcc;
+        }
+
+        @keyframes neonPulse {
+            from {
+                box-shadow:
+                    0 0 12px #00fff5,
+                    0 0 25px #00fff5,
+                    inset 0 0 12px #00fff5;
+            }
+            to {
+                box-shadow:
+                    0 0 30px #00fff5,
+                    0 0 60px #00fff5,
+                    inset 0 0 30px #00fff5;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="neon-container">
+        <h1>Reset GPU & RAM</h1>
+
+        <h2>Why Reset GPU & RAM?</h2>
+        <ul>
+            <li>Fixes display or graphical glitches caused by hardware misalignment.</li>
+            <li>Helps resolve random crashes or system instability.</li>
+            <li>Clears temporary memory or GPU errors that affect performance.</li>
+            <li>Ensures proper contact between components and motherboard slots.</li>
+        </ul>
+
+        <h2>Steps to Reset GPU</h2>
+        <ul>
+            <li>Power off the PC and unplug it from the outlet.</li>
+            <li>Open the case carefully.</li>
+            <li>Unscrew and gently remove the GPU from the PCIe slot.</li>
+            <li>Check the PCIe slot and GPU contacts for dust or debris.</li>
+            <li>Reinsert the GPU firmly and secure it with screws.</li>
+            <li>Reconnect power cables and close the case.</li>
+        </ul>
+
+        <h2>Steps to Reset RAM</h2>
+        <ul>
+            <li>Power off the PC and unplug it from the outlet.</li>
+            <li>Open the case carefully.</li>
+            <li>Release the RAM modules by pressing the clips on each side.</li>
+            <li>Remove the RAM sticks and inspect the contacts for dust or debris.</li>
+            <li>Reinsert the RAM modules firmly until the clips click into place.</li>
+            <li>Close the case and reconnect power.</li>
+        </ul>
+
+        <h2>Additional Tips</h2>
+        <p>
+            Always ground yourself to prevent static discharge. If problems persist after reseating,
+            consider testing components individually or checking for driver/firmware updates.
+        </p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test with Onboard Graphics</title>
+
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Tahoma, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(circle at top, #0f001f, #000);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #e6ffff;
+        }
+
+        .neon-container {
+            max-width: 850px;
+            padding: 40px 45px;
+            border-radius: 18px;
+            background: rgba(0, 0, 0, 0.65);
+            border: 2px solid #00fff5;
+            box-shadow:
+                0 0 15px #00fff5,
+                0 0 35px #00fff5,
+                inset 0 0 15px #00fff5;
+            animation: neonPulse 3s infinite alternate;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.6rem;
+            margin-bottom: 30px;
+            color: #00fff5;
+            text-shadow:
+                0 0 8px #00fff5,
+                0 0 20px #00fff5,
+                0 0 40px #00fff5;
+        }
+
+        h2 {
+            margin-top: 25px;
+            margin-bottom: 12px;
+            font-size: 1.6rem;
+            color: #ff00cc;
+            text-shadow: 0 0 12px #ff00cc;
+        }
+
+        ul {
+            margin-left: 22px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            line-height: 1.7;
+            text-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
+        }
+
+        p {
+            margin-top: 15px;
+            font-size: 1.1rem;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+        }
+
+        strong {
+            color: #00ffcc;
+            text-shadow: 0 0 10px #00ffcc;
+        }
+
+        @keyframes neonPulse {
+            from {
+                box-shadow:
+                    0 0 12px #00fff5,
+                    0 0 25px #00fff5,
+                    inset 0 0 12px #00fff5;
+            }
+            to {
+                box-shadow:
+                    0 0 30px #00fff5,
+                    0 0 60px #00fff5,
+                    inset 0 0 30px #00fff5;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="neon-container">
+        <h1>Test with Onboard Graphics</h1>
+
+        <h2>Why Test with Onboard Graphics?</h2>
+        <ul>
+            <li>Helps determine if a dedicated GPU is causing display issues.</li>
+            <li>Useful when troubleshooting black screens, artifacts, or crashes.</li>
+            <li>Ensures the system can display output without relying on the external GPU.</li>
+            <li>Assists in isolating hardware problems and driver conflicts.</li>
+        </ul>
+
+        <h2>Steps to Test with Onboard Graphics</h2>
+        <ul>
+            <li>Power off the PC and unplug it from the outlet.</li>
+            <li>Remove the dedicated GPU from the PCIe slot if installed.</li>
+            <li>Connect your monitor to the motherboard’s video output (HDMI, DisplayPort, DVI, or VGA).</li>
+            <li>Power on the PC and enter BIOS/UEFI to ensure onboard graphics are enabled.</li>
+            <li>Boot into the operating system and check if display output works correctly.</li>
+            <li>If successful, this confirms the dedicated GPU may need troubleshooting or replacement.</li>
+        </ul>
+
+        <h2>Additional Tips</h2>
+        <p>
+            Update motherboard graphics drivers for the best performance. If the onboard display works
+            fine, try reseating the GPU, checking power connectors, or testing the GPU in another system.
+        </p>
+    </div>
+
+</body>
+</html>
